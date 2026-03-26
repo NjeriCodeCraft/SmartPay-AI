@@ -1,11 +1,13 @@
-# SmartPay AI ML Model
+# SmartPay AI - ML Prediction Model
 
-This is a FastAPI-based service that predicts a user's end-of-month balance based on their income and spending habits.
+This module handles the predictive financial modeling for SmartPay AI. It uses Machine Learning to project a user's end-of-month balance.
 
-## How to Setup
-1. Open your terminal in this folder.
-2. Install requirements: `pip install -r requirements.txt`
-3. Run the app: `python app.py`
+##  The Model: Linear Regression
+Unlike a standard calculator, this API uses **Scikit-Learn's Linear Regression** model. 
+- **Training:** The model is trained on historical transaction data to find the "Line of Best Fit" between spending and final liquidity.
+- **Adaptive:** It automatically accounts for fixed costs (like rent/bills) by calculating the statistical intercept of the spending data.
 
-## Endpoint
-- **POST /predict**: Receives income, spent, and cut_percent to return financial projections.
+## 🚀 How to Run Locally
+1. Navigate to the folder:
+   ```bash
+   cd ml-model
